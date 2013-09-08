@@ -1,0 +1,47 @@
+class Session01Notes
+=begin rdoc
+=== Variables in Ruby
+
+  # The data for the objects exist in a part of memory called the "heap"
+  # When Ruby wants to store an object, it goes to the heap,
+  # finds available memory, and then puts the object's data there.
+  # But how will we know where we put our object?
+  # We need something to keep track of that location (called its address).
+  # 
+  # Variables are like little fingers that point to memory addresses! 
+  # They let us keep track of where our objects are
+  # -- so you can access objects through variables.
+
+  # variables point to objects
+  
+  five = 5 
+  
+  # five is a variable, 5 is the object it is pointing to
+  
+  # methods can be called on variables just like objects 
+  
+  five.even?      
+  # => false
+  
+  five.odd?       
+  # => true
+  
+  five.next       
+  # => 6
+  
+  # special method that sends the object to a method with a symbol name
+  
+  five.send :odd?
+  # => true
+
+  # initialized variables can be set to point to new values
+
+  five            
+  # => 5
+  
+  five = "five"
+  five            
+  # => "five"
+=end
+def session1_04_variables;end
+end

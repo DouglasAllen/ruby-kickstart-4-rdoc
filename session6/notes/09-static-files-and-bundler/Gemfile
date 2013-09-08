@@ -1,0 +1,17 @@
+class Session06Notes
+=begin
+=== Gemfile
+
+  source 'https://rubygems.org' # where to look for gems
+  gem "sinatra"   , "~> 1.2.6"  # our web framework
+  gem "rdiscount" , "~> 1.6.8"  # allows Sinatra to render markdown
+
+=end
+  def session6_09_gemfile;end
+end
+    
+
+source 'https://rubygems.org' :nodoc: # where to look for gems
+gem "sinatra"   , "~> 1.2.6"  # our web framework
+gem "rdiscount" , "~> 1.6.8"  # allows Sinatra to render markdown
+

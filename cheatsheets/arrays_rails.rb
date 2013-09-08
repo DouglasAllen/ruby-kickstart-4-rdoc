@@ -1,0 +1,135 @@
+class CheatSheetsArraysRails
+=begin
+=== Arrays for Rails
+
+  # There are often custom methods for built in Ruby
+  # included in gem packages. These are just some
+  # of those from the Rails gem. Just $ gem install rails
+  # Rails includes them but they are actually from
+  # ActiveSupport. Learning Rails is not required when
+  # learning Ruby but reading code is and we will do
+  # a little from the active_support gem.
+  # 
+  # And here we go:
+  
+  require 'rails'
+  
+  # Class Public methods:
+  # wrap(object)
+  
+  Array.wrap(nil)       # => []
+  Array.wrap([1, 2, 3]) # => [1, 2, 3]
+  Array.wrap(0)         # => [0]
+  
+  Array(foo: :bar)      # => [[:foo, :bar]]
+  # difference:
+  Array.wrap(foo: :bar) # => [{:foo=>:bar}]
+  # What a wonderful way to get a hash.
+  Array.wrap(foo: :bar, bar: @baz, baz: "zip")
+  # => [{:foo=>:bar, :bar=>nil, :baz=>"zip"}]
+  
+  [*object]
+  
+  # Instance Public methods:
+  
+  # deep_dup()
+  array = [1, [2, 3]]
+  dup   = array.deep_dup
+  dup[1][2] = 4
+
+  array[1][2] #=> nil
+  dup[1][2]   #=> 4
+  
+  
+  # extract_options!()
+  def options(*args)
+    args.extract_options!
+  end
+
+  options(1, 2)        # => {}
+  options(1, 2, a: :b) # => {:a=>:b}
+  
+  
+  # to_sentence()
+  [].to_sentence                      # => ""
+  ['one'].to_sentence                 # => "one"
+  ['one', 'two'].to_sentence          # => "one and two"
+  ['one', 'two', 'three'].to_sentence # => "one, two, and three"
+  
+  ['one', 'two'].to_sentence(passing: 'invalid option')
+  # => ArgumentError: Unknown key :passing
+  
+  ['one', 'two'].to_sentence(two_words_connector: '-')
+  # => "one-two"
+  
+  ['one', 'two', 'three'].to_sentence(words_connector: ' or ', last_word_connector: ' or at least ')
+  # => "one or two or at least three"
+  
+  
+  # to_xml
+  [{ foo: 1, bar: 2}, { baz: 3}].to_xml
+
+===
+     <?xml version="1.0" encoding="UTF-8"?>
+     <objects type="array">
+       <object>
+         <bar type="integer">2</bar>
+         <foo type="integer">1</foo>
+       </object>
+       <object>
+         <baz type="integer">3</baz>
+       </object>
+     </objects>
+===
+
+  # in_groups_of(number, fill_with = nil) {&block}
+  cry = %w(1 2 3 4 5 6 7 8 9 10).in_groups_of(3)
+  # => [["1", "2", "3"], ["4", "5", "6"], ["7", "8", "9"], ["10", nil, nil]]
+  %w(1 2 3 4 5 6 7 8 9 10).in_groups_of(3) {|group| p group}
+  #   ["1", "2", "3"]
+  #   ["4", "5", "6"]
+  #   ["7", "8", "9"]
+  #   ["10", nil, nil]
+  
+  %w(1 2 3 4 5).in_groups_of(2, '&nbsp;') {|group| p group}
+  #   ["1", "2"]
+  #   ["3", "4"]
+  #   ["5", "&nbsp;"]
+  
+  %w(1 2 3 4 5).in_groups_of(2, false) {|group| p group}
+  #   ["1", "2"]
+  #   ["3", "4"]
+  #   ["5"]
+  
+  
+  # in_groups(number, fill_with = nil) {&block}
+  cry = %w(1 2 3 4 5 6 7 8 9 10).in_groups(3)
+  
+  
+  # split(value = nil, &block)
+  [1, 2, 3, 4, 5].split(3)       # => [[1, 2], [4, 5]]
+  (1..10).to_a.split { |i| i % 3 == 0 }
+  # => [[1, 2], [4, 5], [7, 8], [10]]
+  
+  
+  # prepend and append
+  # The human way of thinking about adding stuff to
+  # the end of a list is with append (shovel it )
+  alias_method :append,  :<<
+
+  # The human way of thinking about adding stuff to
+  # the beginning of a list is with prepend
+  alias_method :prepend, :unshift
+  
+  
+  # uniq_by(&block)
+  # Returns a unique array based on the criteria in the block.
+  [1, 2, 3, 4].uniq_by { |i| i.odd? } # => [1, 2]
+  
+  
+  # uniq_by!(&block)
+  # Same as uniq_by, but modifies self.
+  [1, 2, 3, 4].uniq_by! { |i| i.odd? } # => [1, 2]
+=end
+  def cheat_sheets_arrays_rails;end
+end

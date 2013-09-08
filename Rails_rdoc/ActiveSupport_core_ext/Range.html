@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>class Range - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>enumerable.rb
+    <li>range/conversions.rb
+    <li>range/include_range.rb
+    <li>range/overlaps.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link"><a href="Object.html">Object</a>
+  
+</nav>
+
+    
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li ><a href="#method-i-include_with_range-3F">#include_with_range?</a>
+    
+    <li ><a href="#method-i-overlaps-3F">#overlaps?</a>
+    
+    <li ><a href="#method-i-to_default_s">#to_default_s</a>
+    
+    <li ><a href="#method-i-to_formatted_s">#to_formatted_s</a>
+    
+    <li ><a href="#method-i-to_s">#to_s</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./doc/created_rid.html">created.rid</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./ActiveSupport.html">ActiveSupport</a>
+  
+    <li><a href="./ActiveSupport/SafeBuffer.html">ActiveSupport::SafeBuffer</a>
+  
+    <li><a href="./ActiveSupport/SafeBuffer/SafeConcatError.html">ActiveSupport::SafeBuffer::SafeConcatError</a>
+  
+    <li><a href="./ActiveSupport/XMLConverter.html">ActiveSupport::XMLConverter</a>
+  
+    <li><a href="./ActiveSupport/XMLConverter/DisallowedType.html">ActiveSupport::XMLConverter::DisallowedType</a>
+  
+    <li><a href="./Array.html">Array</a>
+  
+    <li><a href="./Benchmark.html">Benchmark</a>
+  
+    <li><a href="./BigDecimal.html">BigDecimal</a>
+  
+    <li><a href="./Class.html">Class</a>
+  
+    <li><a href="./Date.html">Date</a>
+  
+    <li><a href="./DateAndTime.html">DateAndTime</a>
+  
+    <li><a href="./DateAndTime/Calculations.html">DateAndTime::Calculations</a>
+  
+    <li><a href="./DateTime.html">DateTime</a>
+  
+    <li><a href="./ERB.html">ERB</a>
+  
+    <li><a href="./ERB/Util.html">ERB::Util</a>
+  
+    <li><a href="./Enumerable.html">Enumerable</a>
+  
+    <li><a href="./FalseClass.html">FalseClass</a>
+  
+    <li><a href="./File.html">File</a>
+  
+    <li><a href="./Hash.html">Hash</a>
+  
+    <li><a href="./Integer.html">Integer</a>
+  
+    <li><a href="./Kernel.html">Kernel</a>
+  
+    <li><a href="./LoadError.html">LoadError</a>
+  
+    <li><a href="./Logger.html">Logger</a>
+  
+    <li><a href="./Logger/SimpleFormatter.html">Logger::SimpleFormatter</a>
+  
+    <li><a href="./Marshal.html">Marshal</a>
+  
+    <li><a href="./MissingSourceFile.html">MissingSourceFile</a>
+  
+    <li><a href="./Module.html">Module</a>
+  
+    <li><a href="./NameError.html">NameError</a>
+  
+    <li><a href="./NilClass.html">NilClass</a>
+  
+    <li><a href="./Numeric.html">Numeric</a>
+  
+    <li><a href="./Object.html">Object</a>
+  
+    <li><a href="./Process.html">Process</a>
+  
+    <li><a href="./Process/Status.html">Process::Status</a>
+  
+    <li><a href="./QualifiedConstUtils.html">QualifiedConstUtils</a>
+  
+    <li><a href="./Range.html">Range</a>
+  
+    <li><a href="./String.html">String</a>
+  
+    <li><a href="./Symbol.html">Symbol</a>
+  
+    <li><a href="./Thread.html">Thread</a>
+  
+    <li><a href="./Time.html">Time</a>
+  
+    <li><a href="./TrueClass.html">TrueClass</a>
+  
+    <li><a href="./URI.html">URI</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class Range</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+    <!-- Constants -->
+    <section id="constants-list" class="section">
+      <h3 class="section-header">Constants</h3>
+      <dl>
+      
+        <dt id="RANGE_FORMATS">RANGE_FORMATS
+        
+        <dd class="description">
+        
+      
+      </dl>
+    </section>
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-include_with_range-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">include_with_range?</span><span
+            class="method-args">(value)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Extends the default Range#include? to support range comparisons.</p>
+
+<pre class="ruby">(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">5</span>).<span class="ruby-identifier">include?</span>(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">5</span>) <span class="ruby-comment"># =&gt; true</span>
+(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">5</span>).<span class="ruby-identifier">include?</span>(<span class="ruby-value">2</span><span class="ruby-operator">..</span><span class="ruby-value">3</span>) <span class="ruby-comment"># =&gt; true</span>
+(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">5</span>).<span class="ruby-identifier">include?</span>(<span class="ruby-value">2</span><span class="ruby-operator">..</span><span class="ruby-value">6</span>) <span class="ruby-comment"># =&gt; false</span>
+</pre>
+
+<p>The native Range#include? behavior is untouched.</p>
+
+<pre class="ruby">(<span class="ruby-string">'a'</span><span class="ruby-operator">..</span><span class="ruby-string">'f'</span>).<span class="ruby-identifier">include?</span>(<span class="ruby-string">'c'</span>) <span class="ruby-comment"># =&gt; true</span>
+(<span class="ruby-value">5</span><span class="ruby-operator">..</span><span class="ruby-value">9</span>).<span class="ruby-identifier">include?</span>(<span class="ruby-value">11</span>) <span class="ruby-comment"># =&gt; false</span>
+</pre>
+          
+          
+
+          
+          <div class="method-source-code" id="include_with_range-3F-source">
+            <pre><span class="ruby-comment"># File range/include_range.rb, line 12</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">include_with_range?</span>(<span class="ruby-identifier">value</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-operator">::</span><span class="ruby-constant">Range</span>)
+    <span class="ruby-comment"># 1...10 includes 1..9 but it does not include 1..10.</span>
+    <span class="ruby-identifier">operator</span> = <span class="ruby-identifier">exclude_end?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">value</span>.<span class="ruby-identifier">exclude_end?</span> <span class="ruby-operator">?</span> <span class="ruby-value">:&lt;</span> <span class="ruby-operator">:</span> <span class="ruby-value">:&lt;=</span>
+    <span class="ruby-identifier">include_without_range?</span>(<span class="ruby-identifier">value</span>.<span class="ruby-identifier">first</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">last</span>.<span class="ruby-identifier">send</span>(<span class="ruby-identifier">operator</span>, <span class="ruby-identifier">last</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">include_without_range?</span>(<span class="ruby-identifier">value</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- include_with_range-3F-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- include_with_range-3F-method -->
+
+    
+      <div id="method-i-overlaps-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">overlaps?</span><span
+            class="method-args">(other)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Compare two ranges and see if they overlap each other</p>
+
+<pre class="ruby">(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">5</span>).<span class="ruby-identifier">overlaps?</span>(<span class="ruby-value">4</span><span class="ruby-operator">..</span><span class="ruby-value">6</span>) <span class="ruby-comment"># =&gt; true</span>
+(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">5</span>).<span class="ruby-identifier">overlaps?</span>(<span class="ruby-value">7</span><span class="ruby-operator">..</span><span class="ruby-value">9</span>) <span class="ruby-comment"># =&gt; false</span>
+</pre>
+          
+          
+
+          
+          <div class="method-source-code" id="overlaps-3F-source">
+            <pre><span class="ruby-comment"># File range/overlaps.rb, line 5</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">overlaps?</span>(<span class="ruby-identifier">other</span>)
+  <span class="ruby-identifier">cover?</span>(<span class="ruby-identifier">other</span>.<span class="ruby-identifier">first</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">cover?</span>(<span class="ruby-identifier">first</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- overlaps-3F-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- overlaps-3F-method -->
+
+    
+      <div id="method-i-to_default_s" class="method-detail method-alias">
+        
+        <div class="method-heading">
+          <span class="method-name">to_default_s</span><span
+            class="method-args">(format = :default)</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+        </div>
+
+        
+
+        
+        <div class="aliases">
+          Alias for: <a href="Range.html#method-i-to_s">to_s</a>
+        </div>
+        
+      </div><!-- to_default_s-method -->
+
+    
+      <div id="method-i-to_formatted_s" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">to_formatted_s</span><span
+            class="method-args">(format = :default)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Gives a human readable format of the range.</p>
+
+<pre class="ruby">(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">100</span>).<span class="ruby-identifier">to_formatted_s</span> <span class="ruby-comment"># =&gt; &quot;1..100&quot;</span>
+</pre>
+          
+          
+
+          
+          <div class="method-source-code" id="to_formatted_s-source">
+            <pre><span class="ruby-comment"># File range/conversions.rb, line 9</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">to_formatted_s</span>(<span class="ruby-identifier">format</span> = <span class="ruby-value">:default</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">formatter</span> = <span class="ruby-constant">RANGE_FORMATS</span>[<span class="ruby-identifier">format</span>]
+    <span class="ruby-identifier">formatter</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">first</span>, <span class="ruby-identifier">last</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">to_default_s</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- to_formatted_s-source -->
+          
+        </div>
+
+        
+        <div class="aliases">
+          Also aliased as: <a href="Range.html#method-i-to_s">to_s</a>
+        </div>
+        
+
+        
+      </div><!-- to_formatted_s-method -->
+
+    
+      <div id="method-i-to_s" class="method-detail method-alias">
+        
+        <div class="method-heading">
+          <span class="method-name">to_s</span><span
+            class="method-args">(format = :default)</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+        </div>
+
+        
+        <div class="aliases">
+          Also aliased as: <a href="Range.html#method-i-to_default_s">to_default_s</a>
+        </div>
+        
+
+        
+        <div class="aliases">
+          Alias for: <a href="Range.html#method-i-to_formatted_s">to_formatted_s</a>
+        </div>
+        
+      </div><!-- to_s-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.1.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

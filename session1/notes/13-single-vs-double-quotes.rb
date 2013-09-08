@@ -1,0 +1,34 @@
+class Session01Notes
+=begin rdoc
+=== String literals
+
+  # There are two ways to represent a literal String in Ruby:
+  
+  # double quotes ( " " ) or single quotes ( ' ' )
+  
+  # With double quotes,
+  # you can place special sequences,
+  # like newlines (\n) in the string that will be converted.
+  
+  dq_message = "Here\'s\nTwo lines."
+  # => "Here's\nTwo lines."
+  
+  puts dq_message
+  # Here's
+  # Two lines.
+  
+  
+  # With single quotes,
+  # the string comes out just as it's typed.
+  # This will\nonly be one line
+  
+  sq_message = 'This will\nonly be one line' 
+  # => "This will\\nonly be one line"
+  
+  puts sq_message
+  # This will\nonly be one line    
+  
+=end
+  def session1_13_single_vs_double_quotes;end
+end
+
